@@ -77,9 +77,13 @@ nav {
 
     &:focus, &:focus-within, &:hover {
       .sub-menu {
-        display: block;
+        display: flex;
       }
     }
+  }
+
+  h1 {
+    flex-grow: 0;
   }
 
   .sub-menu {
@@ -87,5 +91,6 @@ nav {
     position: absolute;
     top: 100%;
     display: none;
+    z-index: 99;
   }
 }
