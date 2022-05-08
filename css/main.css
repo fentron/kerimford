@@ -5,12 +5,14 @@
 body {
   font-size: 1rem;
   background: #111;
-  padding: 3rem 15px;
+  padding: 0 15px;
+  margin: 0;
 }
 
 .container {
   max-width: 800px;
   margin: 0 auto;
+  position: relative;
 }
 
 @media screen and (min-width: 1200px) {
@@ -26,10 +28,16 @@ body, p, h5, a, button, input, textarea, select {
   color: #eee;
 }
 
+figure {
+  margin: 0;
+}
+
 h1, h2, h3, h4 {
   font-family: "Oswald", sans-serif;
   font-weight: 400;
   line-height: 1.5;
+  margin-top: 0;
+  margin-bottom: 0.5em;
 }
 
 h1 {
@@ -50,6 +58,29 @@ h4 {
 
 h5 {
   font-size: 1.2rem;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+nav > * {
+  text-decoration: none;
+  position: relative;
+  font-size: 1.3rem;
+}
+nav > *:hover {
+  text-decoration: underline;
+}
+nav > *:focus .sub-menu, nav > *:focus-within .sub-menu, nav > *:hover .sub-menu {
+  display: block;
+}
+nav .sub-menu {
+  flex-direction: column;
+  position: absolute;
+  top: 100%;
+  display: none;
 }
 
 /*# sourceMappingURL=main.css.map */
